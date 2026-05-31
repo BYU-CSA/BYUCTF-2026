@@ -50,7 +50,6 @@ Challenges, writeups, and hosting for BYUCTF 2026
 - [Hometown Hero 3](./OSINT/Hometown_Hero/Hometown_Hero_3/) - camel4
 - [Hometown Hero 4](./OSINT/Hometown_Hero/Hometown_Hero_4/) - camel4
 - [Hometown Hero 5](./OSINT/Hometown_Hero/Hometown_Hero_5/) - camel4
-- 
 
 ### Misc
 - [Easy](./misc/easy/) - overllama
