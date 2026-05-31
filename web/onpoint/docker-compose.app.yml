@@ -1,0 +1,9 @@
+services:
+  hardxss:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: hardxss
+    restart: unless-stopped
+    ports:
+      - "1370:5000"

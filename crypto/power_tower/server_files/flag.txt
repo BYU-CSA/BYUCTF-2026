@@ -1,0 +1,1 @@
+byuctf{eulers_phi_phunction_is_a_phun_phunction}

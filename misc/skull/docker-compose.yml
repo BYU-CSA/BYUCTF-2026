@@ -1,0 +1,9 @@
+services:
+  skull_bash:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1373:5000"
+    privileged: true

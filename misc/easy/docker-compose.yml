@@ -1,0 +1,9 @@
+services:
+  easy_bash:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1363:5000"
+    privileged: true

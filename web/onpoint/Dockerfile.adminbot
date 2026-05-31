@@ -1,0 +1,26 @@
+FROM node:20-slim
+
+RUN apt-get update && apt-get install -y \
+    chromium \
+    fonts-liberation \
+    --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+
+RUN mkdir /ctf
+WORKDIR /ctf
+
+RUN useradd -M -d /ctf ctf
+
+COPY admin-bot/bot/package.json /ctf/package.json
+RUN npm install
+
+COPY admin-bot/bot/bot.js /ctf/bot.js
+COPY admin-bot/bot/public/ /ctf/public/
+
+RUN chown -R root:ctf /ctf && chmod -R 750 /ctf
+
+EXPOSE 1337
+CMD ["node", "/ctf/bot.js"]

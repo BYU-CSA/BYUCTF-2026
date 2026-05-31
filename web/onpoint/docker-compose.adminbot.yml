@@ -1,0 +1,9 @@
+services:
+  hardxss-admin:
+    build:
+      context: .
+      dockerfile: Dockerfile.adminbot
+    container_name: hardxss-admin
+    restart: unless-stopped
+    ports:
+      - "1369:1337"

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AES Scissor Company - Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        main {
+            padding: 4rem 2rem;
+            text-align: center;
+            flex: 1;
+        }
+        .error-container {
+            background: #fff;
+            padding: 3rem 2rem;
+            margin: 0 auto;
+            border-radius: 8px;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-top: 5px solid #dc3545; /* Red accent for error */
+        }
+        .scissor-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+        .btn-home {
+            background: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s ease-in-out;
+            display: inline-block;
+        }
+        .btn-home:hover {
+            background: #0056b3;
+        }
+        footer {
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AES Scissor Company</h1>
+    </header>
+    
+    <main>
+        <div class="error-container">
+            <span class="scissor-icon">✂️💥</span>
+            <h2>Oops! A dull moment.</h2>
+            <p>
+                It looks like we've hit a snag. The page you are looking for 
+                has been snipped away or never existed in our inventory.
+            </p>
+            <a href="/" id="clear-and-home" class="btn-home">Back to the Shop</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 AES Scissor Company. Precision-crafted errors.
+    </footer>
+
+    <script>
+        document.getElementById('clear-and-home').addEventListener('click', function(e) {
+            document.cookie = "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        });
+    </script>
+</body>
+</html>

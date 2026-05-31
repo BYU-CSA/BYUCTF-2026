@@ -1,0 +1,10 @@
+services:
+  aes-scissor-co:
+    restart: unless-stopped
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1360:8080"

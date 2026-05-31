@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cat</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 20px;
+        }
+        .cat-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cat-container">
+        <h1>{{ name }} the Cat</h1>
+        <div class="info">
+            <p><strong>Age:</strong> {{ age }}</p>
+            <p><strong>Color:</strong> {{ color }}</p>
+            <p><strong>Happy?</strong> {{ "Yes" if is_happy else "No" }}</p>
+        </div>
+        <div class="ascii-art">
+            <pre>{{ ascii_art }}</pre>
+        </div>
+    </div>
+</body>
+</html>

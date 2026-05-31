@@ -1,0 +1,8 @@
+services:
+  easyxss:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1361:5000"

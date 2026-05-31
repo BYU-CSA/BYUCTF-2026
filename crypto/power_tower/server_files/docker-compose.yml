@@ -1,0 +1,9 @@
+services:
+  power_tower:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1371:5000"
+    privileged: true

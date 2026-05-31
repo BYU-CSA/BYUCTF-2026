@@ -1,0 +1,8 @@
+services:
+  my-cat-website:
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "1368:1337"

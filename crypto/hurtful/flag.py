@@ -1,0 +1,1 @@
+flag = b'byuctf{cuz_st3r30typ3s_hurt_92de04}'
